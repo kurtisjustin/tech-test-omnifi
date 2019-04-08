@@ -62,9 +62,6 @@ fetch(dataURL)
     .then(response => response.json())
     .then(data => dataset = data)
     .then(function(dataset) {
-        // dataset.map(function(location) {
-        //     plotMarker(location);
-        // })
         for (let i = 0; i < dataset.length; i++) {
             plotMarker(dataset[i]);
             createMenuItem(dataset[i], i)
